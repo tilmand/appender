@@ -17,7 +17,7 @@ add(FilePath, String) ->
       end,
       io:format(Pid, "~p~n" ,[String]),
       true = ets:insert(file_pids, {FilePath, Pid, Ttl}),
-      timer:apply_after(3*1000, data, delete, [Pid, FilePath]),
+      timer:apply_after(11*1000, data, delete, [Pid, FilePath]),
       ok;
     false ->
       not_exists
