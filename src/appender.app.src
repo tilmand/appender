@@ -1,0 +1,12 @@
+{application, appender,
+ [
+  {description, "file appender"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { appender_app, []}},
+  {env, []}
+ ]}.
